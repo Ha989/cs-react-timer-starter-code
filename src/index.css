@@ -9,32 +9,40 @@
 }
 
 body {
+  height: 100vh;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "", "Segoe UI", "Roboto",
     "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url(http://68.media.tumblr.com/cb8ecf0bda309c2039b88edef2960f4b/tumblr_oefykgWayY1vcoikjo1_540.gif);
+  background-repeat: no-repeat;
+  background-size: 700px;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: Arial, Helvetica, sans-serif,
+}
+
+.timer {
+  max-width: 80vw;
 }
 
 h1 {
-  color: var(--text-main-color);
-  font-family: "Rouge Script", cursive;
-  font-size: 130px;
+  color: rgba(224, 145, 36);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 80px;
   font-weight: normal;
   line-height: 48px;
-  margin: 0 0 50px;
+  margin: 0 0 80px;
+  padding: 30px;
   text-align: center;
   text-shadow: 1px 1px 2px var(--text-shadow-color);
 }
 
 p {
-  color: #ffffff;
+  color: rgb(236, 28, 247);
   font-family: "Carme", sans-serif;
   font-size: 16px;
 }
@@ -42,18 +50,13 @@ p {
 .container {
   margin: auto;
   max-width: 1048px;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.timer__wrapper {
-  border-radius: 24px;
-  background-color: var(--text-shadow-color);
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
-    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
-}
+
 .timer__display {
   padding-left: 1.5em;
 }
@@ -69,12 +72,13 @@ p {
   align-items: center;
 }
 .button {
-  color: white;
-  background-color: var(--text-shadow-color);
-  font-size: 1.5em;
-  border-radius: 100vh;
-  border: 1px solid white;
+  color: rgb(198, 32, 198);
+  background-color: rgba(235, 230, 223, 0.2);
+  font-size: 1.14em;
+  border-radius: 20%;
+  border: 1px solid rgb(5, 3, 3,0.1);
   padding: 1em;
+  margin: 20px;
   transition: ease-in-out 0.3s;
 }
 .button:active {
@@ -85,18 +89,21 @@ p {
   transform: scale(120%);
 }
 .button:disabled {
-  background-color: rgb(170, 164, 164);
+  background-color: rgb(143, 90, 90);
 }
-/* .button.active {
-  border: 1px solid var(--text-main-color);
-  background-color: var(--text-main-color);
-} */
+.lap-list p{
+  font-size: 20px;
+  margin-top: 10px;
+  text-align: center;
+
+}
+
 @media only screen and (max-device-width: 1280px) {
   * {
     font-size: 0.9em;
   }
   h1 {
-    font-size: 60px;
+    font-size:40px;
     line-height: 0px;
   }
   .button__wrapper {
@@ -104,7 +111,18 @@ p {
     width: 100%;
   }
   .timer__display > p {
-    font-size: 3.8em;
+    font-size: 4em;
     padding-left: 0;
   }
+  .timer {
+    width: 100vw;
+    padding-top: 30px;
+  }
+  .button {
+    margin: 5px 5px;
+  }
+  .container p {
+    text-align: center;
+  }
+
 }
